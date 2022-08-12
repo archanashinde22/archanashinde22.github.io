@@ -4,9 +4,153 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Portfolio</title>
   </head>
   <body>
-    <h1> Archana Shinde</h1>
+    <div class="main-container">
+      <header>
+        <h1>Archana Shinde</h1>
+        <div class="nav">
+          <a href="#about">About </a>
+          <a href="#skills">Skills </a>
+          <a href="#project">Projects </a>
+          <a href="#contact">Contact </a>
+        </div>
+      </header>
+      <section class="about-container" id="about">
+        <h2>About me</h2>
+        <p>
+          I am Archana Shinde and I live in Auburn Hills, MI. I have bachelor's
+          Degree in Electronics and Telecommunication. I have 4 years of
+          experience in Cognos Report Developer in Data Warehousing in HSBC
+          Software development India pvt ltd. Currently I joined a Perficient's
+          Bright Paths program at Dev Mountain where I am learning full-stack
+          web development and computer science fundamentals in preparation for a
+          career in software engineering.
+
+          <br /><br />
+          I like reading, solving puzzles, spending time with my Family and
+          Friends.
+        </p>
+      </section>
+
+      <section class="skill-container" id="skills">
+        <h2>Skills</h2>
+        <div class="skill-content">
+          <div>
+            <img src="icons\java.png" />
+            <p>JAVA</p>
+          </div>
+          <div>
+            <img src="icons\javascript.png" />
+            <p>JAVASCRIPT</p>
+          </div>
+          <div>
+            <img src="icons\html.png" />
+            <p>HTML</p>
+          </div>
+          <div>
+            <img src="icons\css.png" />
+            <p>CSS</p>
+          </div>
+          <div>
+            <img src="icons\node.png" />
+            <p>NodeJS</p>
+          </div>
+
+          <div>
+            <img src="icons\postgreesql.png" />
+            <p>postgreSQL</p>
+          </div>
+        </div>
+      </section>
+      <section class="Project-container" id="project">
+        <h2>Project</h2>
+        <div clss="project-content">
+          <h2>Quiz to Learn</h2>
+          <p>
+            Quiz to learn is educational app for kids. Flashcards and Quizzes
+            are a great way to study. It shows quizzes and allows to create a
+            Flashcards.
+          </p>
+
+          <h3>Technology :</h3>
+          <p>Javascript, HTML, Css, NodeJS, Express</p>
+          <div>
+            <h4>High level Solution Design</h4>
+            <div class="sol">
+              <img src="icons/solution.drawio.png" />
+            </div>
+          </div>
+          <h2>Project Video</h2>
+          <div class="video-container">
+            <video controls>
+              <source src="icons/Capstone-Quiz.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="project-link">
+            <a href="https://github.com/archanashinde22/Capstone-Quiz">
+              <!-- <button>Github Repo</button> -->
+              Github Repo
+            </a>
+            <a href="https://quiz-to-learn.herokuapp.com/home.html">
+              <!-- <button>Project website</button> -->
+              Project website
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="contact-container" id="contact">
+        <h2>Contact</h2>
+        <div class="email">
+          <a href="mailto:vyawahare.archana@gmail.com"
+            ><h3>vyawahare.archana@gmail.com</h3></a
+          >
+        </div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/archana-shinde6"
+            ><img src="linkedin.png" alt="link to linkedin" />
+          </a>
+          <a href="https://github.com/archanashinde22"
+            ><img src="github_logo_icon.png" alt="link to github_logo_icon" />
+          </a>
+        </div>
+      </section>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 30px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 30 ||
+          document.documentElement.scrollTop > 30
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
   </body>
 </html>
